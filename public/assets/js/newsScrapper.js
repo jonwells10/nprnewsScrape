@@ -1,10 +1,8 @@
 $(document).ready(function() {
-  /////////////////////////////////////////////// /* Initialize Modals */ ////////////////////////////////////////////////////////
   $('#saveModal').modal(); // Articles Saved Modal
   $('#modalMessage').modal(); // Message Modal
   $('#articleModal').modal(); // Notes Modal
 
-  /////////////////////////////////////////////// /* Event Listeners */ ////////////////////////////////////////////////////////
   $('.searchArticle').on("click", () => { // Scrap Articles Request
     // console.log("searchArticle Button clicked");
     fetch("/api/search", {method: "GET"}).then(() => window.location.replace("/api/search"));
@@ -168,4 +166,4 @@ $(document).ready(function() {
       });
     });
   }); // End savedArticles btn Click
-}); // End of document.ready
+}); 
